@@ -33,11 +33,14 @@ cd fuelup
 apt install cargo
 cargo run --release
 
-# Devam ediyoruz.
+# Devam ediyoruz. 
 fuelup self update
 fuelup toolchain install beta-5
 fuelup default beta-5
 fuelup --version
+
+# Yukarıdaki komutlarda hata ile karşılaşırsanız, aşağıdaki komutu deneyip o şekilde yeniden yukarıdaki 4 fuelup komutunu girin.
+export PATH="${HOME}/.fuelup/bin:${PATH}"
 
 # Kontrat işlemlerine geçelim
 mkdir fuel-project

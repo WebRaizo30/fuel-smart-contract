@@ -33,15 +33,14 @@ cd fuelup
 apt install cargo
 cargo run --release
 
-# Dizin gösterelim
-export PATH="${HOME}/.fuelup/bin:${PATH}"
-
 # Devam ediyoruz. 
 fuelup self update
 fuelup toolchain install beta-5
 fuelup default beta-5
 fuelup --version
 
+# Yukarıdaki komutlarda hata ile karşılaşırsanız, aşağıdaki komutu deneyip o şekilde yeniden yukarıdaki 4 fuelup komutunu girin.
+export PATH="${HOME}/.fuelup/bin:${PATH}"
 
 # Kontrat işlemlerine geçelim
 mkdir fuel-project
@@ -91,24 +90,6 @@ forc wallet accounts
 # Cüzdanınıza [Faucet](https://faucet-beta-5.fuel.network/) alın
 # Ve kontrat deploy edin
 forc deploy --testnet
-
-# İmza işlemi için hangi hesabın kullanılmasını istediğinize dair teyit isteyecek sıfır girin
-Please provide the index of account to use for signing: 0
-
-# Fuel adresininiz için teyit isteyecek Y diyin.
-Do you agree to sign this transaction with fuel1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0n6? [y/N]: y
-
-# Sorun yoksa şöyle bir çıktı alacaksınız
-
-```
-Contract counter-contract Deployed!
-
-Network: https://beta-5.fuel.network
-Contract ID: 0xe0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxe
-Deployed in block 0x8fexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxc61
-```
-
-
 
 # Bir süre sonra https://fuellabs.github.io/block-explorer-v2/beta-5/#/ buradan cüzdan adresinizle kontrol edebilirsiniz.
 
